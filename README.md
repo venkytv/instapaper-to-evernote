@@ -15,14 +15,18 @@ to Evernote.
 
 ### Usage
 
-- Create an env file with your Instapaper credentials.  Have a look at the
-  sample [env.yaml.SAMPLE](env.yaml.SAMPLE) file.
+- Set the following environment variables:
+  - `INSTAPAPER_USERNAME`: Your Instapaper username
+  - `INSTAPAPER_PASSWORD`: Your Instapaper password
+  - `API_CONSUMER_KEY`: Your Instapaper API consumer key
+  - `API_CONSUMER_SECRET`: Your Instapaper API consumer secret
 - Run `bundle install` to install the required gems
 - Run `bundle exec ruby ip2en.rb`
 
 #### Run within a Docker container
 
 ```
-$ make build
-$ docker run --rm instapaper-to-evernote
+$ docker run -e INSTAPAPER_USERNAME -e INSTAPAPER_PASSWORD \
+	-e API_CONSUMER_KEY -e API_CONSUMER_SECRET \
+	--rm venkytv/instapaper-to-evernote:latest
 ```
