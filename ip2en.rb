@@ -6,7 +6,6 @@ require 'yaml'
 
 username = ENV.fetch("INSTAPAPER_USERNAME")
 password = ENV.fetch("INSTAPAPER_PASSWORD")
-p username
 
 credentials = {
   consumer_key: ENV.fetch("API_CONSUMER_KEY"),
