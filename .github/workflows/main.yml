@@ -18,7 +18,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: ghcr.io/${{ github.repository_owner }}/instapaper-to-evernote
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/instapaper-to-evernote
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
